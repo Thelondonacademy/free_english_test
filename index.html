@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Test di livello inglese gratuito | The London Academy</title>
+  <meta name="description" content="Scopri il tuo livello di inglese A1-C2 con il test adattivo gratuito di The London Academy. Ricevi un report personalizzato e il percorso consigliato." />
+  <meta property="og:title" content="Test di livello inglese gratuito" />
+  <meta property="og:description" content="Test adattivo A1-C2 con risultato personalizzato e percorso consigliato." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section id="welcome-screen" class="screen active" aria-labelledby="welcome-title">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">The London Academy · Fidenza</p>
+          <h1 id="welcome-title">Scopri il tuo livello di inglese in 10 minuti</h1>
+          <p class="hero-subtitle">Test adattivo A1-C2 per adulti. Alla fine ricevi un report personalizzato e il percorso più adatto per migliorare.</p>
+          <div class="hero-actions">
+            <button id="start-test-btn" class="btn btn-primary">Inizia il test gratuito</button>
+            <a class="btn btn-ghost" href="#how-it-works">Come funziona</a>
+          </div>
+          <p class="microcopy">Nessun pagamento. Risultato stimato secondo i livelli CEFR.</p>
+        </div>
+        <div class="hero-card" aria-label="Informazioni sul test">
+          <div class="score-badge">A1–C2</div>
+          <h2>Test adattivo</h2>
+          <ul class="check-list">
+            <li>18 domande mirate</li>
+            <li>Si adatta alle tue risposte</li>
+            <li>Report con errori principali</li>
+            <li>Consiglio pratico sul corso più adatto</li>
+          </ul>
+        </div>
+      </div>
+      <div id="how-it-works" class="steps-panel">
+        <div><strong>1.</strong> Rispondi alle domande</div>
+        <div><strong>2.</strong> Lasci nome ed email</div>
+        <div><strong>3.</strong> Ricevi risultato e percorso consigliato</div>
+      </div>
+    </section>
+
+    <section id="test-screen" class="screen" aria-live="polite">
+      <div class="test-topbar">
+        <div>
+          <p class="eyebrow">Test in corso</p>
+          <h2 id="question-counter">Domanda 1 di 18</h2>
+        </div>
+        <div class="progress-info">
+          <span id="current-level-pill" class="level-pill">Livello stimato: A2</span>
+          <span id="progress-percentage">0%</span>
+        </div>
+      </div>
+      <div class="progress-track" aria-hidden="true"><div id="progress-fill" class="progress-fill"></div></div>
+      <div class="question-card">
+        <p id="question-level" class="question-level">Livello domanda: A2</p>
+        <h3 id="question-text" class="question-text"></h3>
+        <div id="options-container" class="options-container"></div>
+      </div>
+      <div class="test-actions">
+        <button id="next-btn" class="btn btn-primary" disabled>Conferma risposta</button>
+      </div>
+    </section>
+
+    <section id="lead-screen" class="screen">
+      <div class="lead-grid">
+        <div class="lead-copy">
+          <p class="eyebrow">Risultato pronto</p>
+          <h2>Abbiamo preparato il tuo report di livello</h2>
+          <p>Inserisci i tuoi dati per vedere subito il livello stimato, gli errori principali e ricevere il report via email.</p>
+          <div class="report-preview">
+            <div><strong>Incluso nel report:</strong></div>
+            <ul class="check-list">
+              <li>Livello CEFR stimato</li>
+              <li>Percentuale di risposte corrette</li>
+              <li>Argomenti da migliorare</li>
+              <li>Consiglio: videocorso, lezioni individuali o certificazione</li>
+            </ul>
+          </div>
+        </div>
+        <form id="lead-form" class="lead-form" novalidate>
+          <div class="form-field">
+            <label for="full-name">Nome e cognome *</label>
+            <input id="full-name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="form-field">
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="form-field">
+            <label for="phone">Telefono / WhatsApp <span>opzionale</span></label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" />
+          </div>
+          <div class="form-field">
+            <label for="goal">Obiettivo principale</label>
+            <select id="goal" name="goal">
+              <option value="Migliorare da zero">Migliorare da zero</option>
+              <option value="Conversazione">Parlare con più sicurezza</option>
+              <option value="Lavoro">Inglese per lavoro</option>
+              <option value="Viaggi">Inglese per viaggiare</option>
+              <option value="Certificazione">Preparare una certificazione</option>
+              <option value="Non so">Non lo so ancora</option>
+            </select>
+          </div>
+          <div class="hidden-field" aria-hidden="true">
+            <label for="website">Website</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+          <label class="checkbox-row">
+            <input id="privacy" name="privacy" type="checkbox" required />
+            <span>Ho letto e accetto la <a id="privacy-link" href="#" target="_blank" rel="noopener">Privacy Policy</a>. *</span>
+          </label>
+          <label class="checkbox-row">
+            <input id="marketing-consent" name="marketing" type="checkbox" />
+            <span>Desidero ricevere consigli gratuiti e comunicazioni sui corsi di inglese.</span>
+          </label>
+          <p id="form-error" class="form-error" role="alert"></p>
+          <button class="btn btn-primary btn-full" type="submit">Vedi il mio risultato</button>
+          <p class="microcopy">Useremo i dati per inviarti il risultato del test e, se acconsenti, informazioni utili sui percorsi più adatti.</p>
+        </form>
+      </div>
+    </section>
+
+    <section id="result-screen" class="screen">
+      <div class="result-header">
+        <p class="eyebrow">Report personale</p>
+        <h2>Il tuo livello stimato è</h2>
+        <div id="final-level" class="final-level">B1</div>
+        <p id="level-description" class="level-description"></p>
+      </div>
+
+      <div class="result-grid">
+        <article class="result-card">
+          <h3>Riepilogo</h3>
+          <div id="score-summary" class="metrics-grid"></div>
+        </article>
+        <article class="result-card">
+          <h3>Da migliorare</h3>
+          <div id="weak-topics" class="topic-list"></div>
+        </article>
+      </div>
+
+      <article id="recommendation-card" class="recommendation-card"></article>
+
+      <div class="result-actions">
+        <a id="primary-cta" class="btn btn-primary" href="#" target="_blank" rel="noopener">Scopri il percorso consigliato</a>
+        <a id="secondary-cta" class="btn btn-ghost" href="#" target="_blank" rel="noopener">Parla con The London Academy</a>
+        <button id="retake-btn" class="btn btn-light" type="button">Rifai il test</button>
+      </div>
+    </section>
+
+    <div id="loading-overlay" class="loading-overlay" hidden>
+      <div class="spinner"></div>
+      <p>Preparazione del report...</p>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="config.js"></script>
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
